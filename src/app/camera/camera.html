@@ -1,0 +1,48 @@
+<div class="camera-abrir">
+    <button class="camera-btn btn-abrir" type="button" (click)="abrirCamera()">
+        📷 Abrir câmera
+    </button>
+</div>
+
+<!---Modal Da Camera--->
+
+<div id="cameraModal" class="camera-modal">
+
+    <div class="camera-preview">
+        <video id="video" autoplay playsinline></video>
+        <canvas id="canvas" style="display: none;"></canvas>
+    </div>
+
+    <!-- PREVIEW DA FOTO DENTRO DO MODAL -->
+    <div id="fotoPreviewArea" style="display: none; margin: 15px 0; text-align: center;">
+        <img id="fotoPreview" class="foto-preview" alt="Prévia da foto">
+        <p style="font-size: 0.8rem; color: white;">
+            Foto capturada
+        </p>
+    </div>
+
+    <div id="statusInfo" class="info-status">
+        Aguardando permissão da câmera e GPS...
+    </div>
+
+    <div class="camera-controls">
+        <button class="camera-btn btn-capturar" id="btnCapturar" type="button" (click)="tirarFoto()">
+            📸 Capturar
+        </button>
+
+        <button class="camera-btn btn-fechar" id="btnFecharCamera" type="button" (click)="fecharCamera()">
+            ✕ Fechar
+        </button>
+    </div>
+
+    <div id="confirmArea" style="display: none;" class="camera-controls">
+
+        <button class="camera-btn btn-confirmar" id="btnConfirmar" type="button" (click)="confirmarFoto()">
+            ✓ Usar esta foto
+        </button>
+
+        <button class="camera-btn btn-fechar" id="btnTirarOutra" type="button" (click)="tirarOutraFoto()">
+            ⟳ Tirar outra
+        </button>
+
+    </div>

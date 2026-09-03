@@ -1,0 +1,128 @@
+.camera-abrir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn-abrir {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    background-color: #2563eb;
+    color: #fff;
+
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-abrir:hover {
+    background-color: #1d4ed8;
+}
+
+.camera-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.camera-modal.active {
+    display: flex;
+}
+
+.camera-preview {
+    width: 100%;
+    max-width: 600px;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.camera-preview video,
+.camera-preview canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Controles da câmera */
+.camera-controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.camera-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+
+
+.camera-btn:hover {
+    transform: scale(1.05);
+}
+
+.camera-btn:active {
+    transform: scale(0.95);
+}
+
+.btn-capturar {
+    background: #4CAF50;
+    color: white;
+}
+
+.btn-fechar {
+    background: #f44336;
+    color: white;
+}
+
+.btn-confirmar {
+    background: #394de0;
+    color: white;
+}
+
+
+
+#previewExternoArea {
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 20px 0;
+
+}
+
+#previewExterno {
+    width: 280px;
+    display: block;
+}
+
+
+/* Preview da foto */
+.foto-preview {
+    max-width: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+}
+
+
+#video {
+    transform: scaleX(-1);
+
+}
